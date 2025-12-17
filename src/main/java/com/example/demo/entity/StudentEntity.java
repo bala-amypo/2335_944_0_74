@@ -3,8 +3,10 @@ package com.example.project.entity;
 import java.time.LocalDate;
 
 public class Studententity {
-    private String name;
+    @Id
     private int id;
+    private String name;
+   
     private LocalDate date;
     private float cgpa;
     
