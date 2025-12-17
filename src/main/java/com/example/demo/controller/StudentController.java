@@ -22,10 +22,18 @@ public class Studentcontroller {
     }
 
     @PutMapping("/update/{id}")
-    public Studententity update(@PathVariable int id, @RequestBody Studententity st){
-        return src.update(id, st);
+public String update(@PathVariable Long id, @RequestBody Student newStudent) {
+
+    Optional<Student> student = studentService.getOneStudent(id);
+
+    if (student.isPresent()) {
+        newStudent.setId(id);
+        studentService.insertStudent(newStudent);
+        return "Updated Success";
     }
 
+    return "Id not found";
+}
 
     @DeleteMapping("/delete/{id}")
     public String delete(@PathVariable int id){
