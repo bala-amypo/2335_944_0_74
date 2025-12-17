@@ -2,6 +2,7 @@ package com.example.demo.newentity;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
+@NewfileEntity
 
 public class NewfileEntity {
 
@@ -32,7 +33,7 @@ public class NewfileEntity {
     public void setEmail(String email) {
         this.email = email;
     }
-    public Studententity(String name, int id, String email) {
+    public NewfileEntitytentity(String name, int id, String email) {
         this.name = name;
         this.id = id;
         this.email = email;
@@ -41,9 +42,4 @@ public class NewfileEntity {
     }
     
 
-    
-    
-    
-
-}
 }
